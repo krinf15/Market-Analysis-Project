@@ -1,47 +1,151 @@
-# 📊 Market Analysis Project with Power BI
+# 📈 MarketMindz — Analyse de campagnes marketing et de clientèle
 
-## 📝 Project Overview
-Welcome to the Market Analysis Project! This project, developed in collaboration with **MarketMindz**, focuses on analyzing customer data and campaign performance for a retail vendor in the food and beverage industry. The goal is to extract valuable insights that inform our client about customer preferences, product popularity, and campaign success factors.
+Rapport Power BI en 4 pages pour un distributeur agroalimentaire : performance des campagnes, contribution des produits, profil de la clientèle et facteurs de décision d'achat.
 
-## 🎯 Objectives
-- **📈 Campaign Performance Analysis**: Evaluate the effectiveness of six recent marketing campaigns.
-- **🍷 Product Performance**: Identify which products are driving revenue and customer interest.
-- **👥 Customer Profiling**: Understand demographic factors such as education level, marital status, and family structure.
-- **🔍 Influence Drivers**: Determine key factors influencing campaign performance and purchase decisions.
+![Performance des campagnes et des produits](Images/02-campagnes-produits.png)
 
-## 🔄 Data Model
-Originally, all data resided in a single table called **"Marketing Data"**, which combined information on campaigns, customers, products, and channels. After data transformations, we structured the data into separate tables for a more organized and in-depth analysis:
+---
 
-1. **📢 Canal**: Details the distribution channels (e.g., web, store, catalog, deals) used across campaigns.
-2. **🛒 Products**: Lists products involved in campaigns, enabling product-specific analysis.
-3. **📅 Campaign**: Contains unique attributes of each campaign, including performance metrics and customer engagement data.
+## Contexte
 
-This transformed data model allows for a focused and efficient analysis of the campaign metrics, customer segmentation, and product performance.
+MarketMindz est un cabinet d'études de marché qui accompagne un distributeur de produits alimentaires et de boissons. Le client est une petite structure qui **connaît encore mal son marché et sa clientèle**, et qui vient de transmettre un premier échantillon de données marketing.
 
-## 📊 Key Performance Indicators (KPIs) and Insights
+Quatre questions posées :
 
-1. **💥 Top Campaign by Purchases**: **Campaign 6** had the highest number of purchases attributed to it.
-2. **🏆 Best-Selling Products**: Wine consistently emerged as the top-selling product, followed by meat and baked goods.
-3. **💰 Sales Revenue by Campaign**: Campaigns 6 and 5 led in revenue, with Campaign 6 generating the highest total.
-4. **🧑‍🎓 Customer Demographics**:
-   - **Education**: The majority of customers have a university-level education.
-   - **Marital Status**: A large portion of customers are married.
-   - **Family Structure**: 58% of customers do not have children at home, and 52% do not have teenagers.
-5. **💳 Spending & Platform Preferences**:
-   - **Top-Spending Product**: Wine generated the highest revenue, followed by meat.
-   - **Preferred Purchase Platforms**: Most purchases occurred via stores and online platforms.
-6. **💡 Customer Segmentation by Income**: Customers with an income above $60,585 were more likely to engage with **Campaign 1**.
+1. Comment se comportent nos **6 campagnes** marketing récentes ?
+2. Comment se comportent nos **6 catégories de produits** ?
+3. **Qui sont** nos clients ?
+4. **Qu'est-ce qui détermine** la performance d'une campagne et la décision d'achat ?
 
-## 🌟 Key Influencers
-The Key Influencers visualization helped identify important factors that impact campaign acceptance and overall sales. Key drivers include:
+> **Source des données :** jeu de données d'étude de cas *MarketMindz*. 2 239 clients, 33 000 achats, ~1,36 M€ de chiffre d'affaires.
 
-- **💵 Income**: Higher-income customers showed greater engagement with certain campaigns.
-- **🌐 Web Visits**: Customers with frequent web visits tended to participate more in campaigns.
-- **👨‍👩‍👧 Family Composition**: Households without children or teenagers showed higher spending patterns.
+---
 
-## 🚀 Installation and Usage
-To explore this project on Power BI Desktop, follow these steps:
+## Méthode
 
-1. **Clone the Project Repository**:
-   ```bash
-   git clone <repository-url>
+| Étape | Détail |
+|---|---|
+| Préparation | Nettoyage et typage sous Power Query, contrôle du dictionnaire de données |
+| Modélisation | Mesures DAX : CA par campagne et par produit, taux d'acceptation, paniers moyens |
+| Analyse | Visuel **Influenceurs clés** (analyse automatisée des facteurs) sur l'acceptation de campagne et le chiffre d'affaires |
+| Restitution | Rapport 4 pages : contexte, campagnes, clientèle, facteurs |
+
+---
+
+## Résultats
+
+### 1. Une campagne écrase les autres — et une autre est à arrêter
+
+| Campagne | Achats attribués | Chiffre d'affaires |
+|---|---|---|
+| **Campagne 6** | **333** | **0,33 M€** |
+| Campagne 4 | 166 | 0,19 M€ |
+| Campagne 3 | 163 | 0,12 M€ |
+| Campagne 5 | 162 | 0,26 M€ |
+| Campagne 1 | 144 | 0,21 M€ |
+| **Campagne 2** | **30** | **0,04 M€** |
+
+La campagne 6 génère **11 fois plus d'achats** et **8 fois plus de revenu** que la campagne 2.
+
+👉 **Implication :** la campagne 6 est le modèle à reproduire ; la campagne 2 ne justifie pas son budget. À noter : la campagne 5 rapporte davantage que la 4 et la 3 avec moins d'achats — son panier moyen est plus élevé, elle touche une clientèle plus aisée.
+
+### 2. Le vin est le produit stratégique
+
+| Produit | Chiffre d'affaires | Part |
+|---|---|---|
+| **Vins** | **681 K€** | **50 %** |
+| Viande | 373 K€ | 28 % |
+| Boulangerie | 98 K€ | 7 % |
+| Poisson | 84 K€ | 6 % |
+| Sucré | 61 K€ | 5 % |
+| Fruits | 59 K€ | 4 % |
+
+**Vin et viande représentent 78 % du chiffre d'affaires.** Le vin est en tête dans **les six campagnes**, où il pèse entre 51 % et 69 % des achats.
+
+👉 **Implication :** la stratégie commerciale du client est, dans les faits, une stratégie vin. Les quatre autres catégories pèsent 22 % à elles quatre.
+
+### 3. Le magasin reste le premier canal
+
+| Canal | Achats |
+|---|---|
+| Magasin | 13 000 |
+| Web | 9 000 |
+| Catalogue | 6 000 |
+| Promotions | 5 000 |
+
+Le web représente déjà 27 % des achats — un canal secondaire mais installé.
+
+### 4. Le profil client
+
+![Composition de la clientèle](Images/03-profil-clients.png)
+
+| | |
+|---|---|
+| Clients | **2 239** |
+| Revenu moyen | **52 230 $** |
+| **Âge moyen** | **56 ans** |
+| Diplômés du supérieur | 50 % (*Graduation*), + 38 % niveau master ou doctorat |
+| Mariés | 39 % |
+| Sans enfant à la maison | 58 % |
+
+👉 **Implication :** la clientèle est **âgée, diplômée et sans enfant au foyer**. Cela explique la domination du vin — et les données le confirment : *plus la tranche d'âge augmente, plus la part du vin croît et celle de la viande diminue*. Mais un âge moyen de 56 ans pose une question de **renouvellement de la clientèle** que ce jeu de données ne permet pas de traiter.
+
+### 5. Ce qui déclenche réellement l'achat
+
+![Facteurs d'influence](Images/04-facteurs-influence.png)
+
+Le visuel *Influenceurs clés* quantifie les facteurs d'acceptation de la campagne 1 :
+
+| Facteur | Effet sur la probabilité d'acceptation |
+|---|---|
+| **Revenu supérieur à 60 585 $** | **× 7,85** |
+| Aucun enfant à la maison | × 3,66 |
+| 5 visites web par mois ou moins | × 3,11 |
+| Aucun adolescent à la maison | × 1,79 |
+| Marié | × 1,40 |
+
+Et sur le chiffre d'affaires moyen : revenu supérieur à 70 123 $ → **+ 131,70 €**, 3 visites web ou moins → + 131,20 €, aucun enfant → + 105,20 €.
+
+👉 **L'enseignement central du rapport :** le revenu est de très loin le premier facteur, devant tous les critères de foyer. Un ciblage sur le seul critère « revenu > 60 000 $ » multiplierait par près de 8 la probabilité d'acceptation.
+
+⚠️ Le facteur « peu de visites web » est **contre-intuitif** et mérite prudence : il s'agit probablement d'un effet de profil (les gros acheteurs de vin commandent par catalogue ou en magasin, pas sur le web) plutôt que d'un lien de cause à effet. À ne pas traduire en action sans vérification.
+
+---
+
+## Ce que je retiens
+
+Le client pensait avoir six campagnes et six produits à piloter. Les données disent autre chose : **il a une campagne qui fonctionne, un produit qui porte le chiffre d'affaires, et un segment client unique — les foyers aisés sans enfant.** La priorité n'est pas d'optimiser six campagnes, c'est de comprendre pourquoi la campagne 6 fonctionne et de la répliquer.
+
+## Limites
+
+- **Corrélation, pas causalité.** Le visuel *Influenceurs clés* identifie des associations statistiques, pas des relations causales. Seul un test A/B permettrait de trancher.
+- **Aucune donnée de coût.** L'analyse porte sur le chiffre d'affaires ; une campagne rentable peut afficher un CA modeste.
+- **Pas d'historique temporel** sur les campagnes : impossible de distinguer un effet de saison d'un effet de campagne.
+- **Échantillon de 2 239 clients**, sur une seule période.
+
+## À améliorer sur le rapport lui-même
+
+Points identifiés en relisant l'export PDF, à corriger dans le fichier `.pbix` :
+
+- L'indicateur *# of Customers* affiche **`2,239K`** alors que le total réel est de **2 239 clients** — erreur de format de la mesure *(vérifiable : les barres du graphique Éducation totalisent 2 239)*
+- Plusieurs fautes dans les titres des visuels : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *Campagin*, *resuletd*
+- La page 4 est en français alors que les trois premières sont en anglais — à uniformiser
+
+---
+
+## Explorer le projet
+
+| Fichier | Contenu |
+|---|---|
+| [`Market-Analysis.pbix`](Market-Analysis.pbix) | Rapport Power BI, interactif |
+| [`Market-Analysis.pdf`](Market-Analysis.pdf) | Export PDF des 4 pages |
+| [`Data/`](Data/) | Jeu de données et dictionnaire |
+| [`Images/`](Images/) | Captures des 4 pages du rapport |
+| [`Design/`](Design/) | Gabarits de fond utilisés pour la mise en page |
+
+**Outils :** Power BI Desktop · Power Query · DAX
+
+---
+
+👤 **Carine FOTSO** — Data Analyst
+[LinkedIn](https://www.linkedin.com/in/carinefotso) · [GitHub](https://github.com/krinf15)
