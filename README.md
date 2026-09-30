@@ -123,13 +123,19 @@ Le client pensait avoir six campagnes et six produits à piloter. Les données d
 - **Pas d'historique temporel** sur les campagnes : impossible de distinguer un effet de saison d'un effet de campagne.
 - **Échantillon de 2 239 clients**, sur une seule période.
 
-## À améliorer sur le rapport lui-même
+## Corrections apportées — septembre 2026
 
-Points identifiés en relisant l'export PDF, à corriger dans le fichier `.pbix` :
+Rapport repris deux ans après sa première version, après relecture complète de l'export PDF.
 
-- L'indicateur *# of Customers* affiche **`2,239K`** alors que le total réel est de **2 239 clients** — erreur de format de la mesure *(vérifiable : les barres du graphique Éducation totalisent 2 239)*
-- Plusieurs fautes dans les titres des visuels : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *Campagin*, *resuletd*
+- ✅ **Indicateur *# of Customers*** : il affichait `2,239K`, soit 2,2 millions de clients, alors que le total réel est de **2 239**. Erreur de format de la mesure, corrigée. *(Contrôle : les barres du graphique Éducation totalisent bien 2 239.)*
+- ✅ **Fautes corrigées dans les titres** : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *ofour*, *od customers*, *Wth Age*, *resuletd*.
+
+### Reste à faire
+
+- Page 2 : *Campagin* → **Campaign**, et *accross* → **across** (deux sous-titres)
 - La page 4 est en français alors que les trois premières sont en anglais — à uniformiser
+
+> 💡 **Ce que je retiens de cette relecture.** Une mesure mal formatée affichait un chiffre **mille fois trop grand**, sans qu'aucune alerte ne se déclenche et sans que personne ne le remarque pendant deux ans. Le contrôle qui l'a révélée est pourtant simple : additionner les barres d'un graphique et comparer au total annoncé. C'est devenu un réflexe systématique.
 
 ---
 
