@@ -133,7 +133,12 @@ Rapport repris deux ans après sa première version, après relecture complète 
 ### Reste à faire
 
 - Page 2 : *Campagin* → **Campaign**, et *accross* → **across** (deux sous-titres)
-- La page 4 est en français alors que les trois premières sont en anglais — à uniformiser
+
+### Une précision sur la page 4
+
+Les libellés de la page 4 (*Influenceurs clés*, *Ce qui influence*, *Trier par*) s'affichent en français alors que le reste du rapport est en anglais. **Ce n'est pas un oubli de saisie** : ces textes sont générés par le visuel natif **Influenceurs clés**, dont l'interface suit la langue d'affichage de Power BI Desktop. Ils ne sont pas éditables visuel par visuel.
+
+Pour uniformiser, il faut basculer la langue de l'application (*Fichier → Options → Paramètres régionaux*) puis réexporter — ce qui change l'interface de tous les visuels natifs à la fois.
 
 > 💡 **Ce que je retiens de cette relecture.** Une mesure mal formatée affichait un chiffre **mille fois trop grand**, sans qu'aucune alerte ne se déclenche et sans que personne ne le remarque pendant deux ans. Le contrôle qui l'a révélée est pourtant simple : additionner les barres d'un graphique et comparer au total annoncé. C'est devenu un réflexe systématique.
 
