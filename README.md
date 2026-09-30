@@ -130,9 +130,7 @@ Rapport repris deux ans après sa première version, après relecture complète 
 - ✅ **Indicateur *# of Customers*** : il affichait `2,239K`, soit 2,2 millions de clients, alors que le total réel est de **2 239**. Erreur de format de la mesure, corrigée. *(Contrôle : les barres du graphique Éducation totalisent bien 2 239.)*
 - ✅ **Fautes corrigées dans les titres** : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *ofour*, *od customers*, *Wth Age*, *resuletd*.
 
-### Reste à faire
-
-- Page 2 : *Campagin* → **Campaign**, et *accross* → **across** (deux sous-titres)
+- ✅ **Page 2** : *Campagin* → *Campaign*, *accross* → *across*.
 
 ### Une précision sur la page 4
 
