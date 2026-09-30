@@ -104,7 +104,7 @@ Le visuel *Influenceurs clés* quantifie les facteurs d'acceptation de la campag
 | Aucun adolescent à la maison | × 1,79 |
 | Marié | × 1,40 |
 
-Et sur le chiffre d'affaires moyen : revenu supérieur à 70 123 $ → **+ 131,70 €**, 3 visites web ou moins → + 131,20 €, aucun enfant → + 105,20 €.
+Et sur le chiffre d'affaires moyen, tous produits confondus : revenu supérieur à 67 381 $ → **+ 172,50 €**, aucun enfant → + 159,20 €, 3 visites web ou moins → + 142 €.
 
 👉 **L'enseignement central du rapport :** le revenu est de très loin le premier facteur, devant tous les critères de foyer. Un ciblage sur le seul critère « revenu > 60 000 $ » multiplierait par près de 8 la probabilité d'acceptation.
 
@@ -128,9 +128,9 @@ Le client pensait avoir six campagnes et six produits à piloter. Les données d
 Rapport repris deux ans après sa première version, après relecture complète de l'export PDF.
 
 - ✅ **Indicateur *# of Customers*** : il affichait `2,239K`, soit 2,2 millions de clients, alors que le total réel est de **2 239**. Erreur de format de la mesure, corrigée. *(Contrôle : les barres du graphique Éducation totalisent bien 2 239.)*
-- ✅ **Fautes corrigées dans les titres** : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *ofour*, *od customers*, *Wth Age*, *resuletd*.
-
-- ✅ **Page 2** : *Campagin* → *Campaign*, *accross* → *across*.
+- ✅ **Fautes corrigées dans les titres** : *Custaomers*, *complited*, *Statut*, *Opeted*, *Macimun*, *ofour*, *od customers*, *Wth Age*, *resuletd*, *recents*, *purchased*, *Changed With Age*, *elders customers*.
+- ✅ **Page 2** : *Campagin* → *Campaign*, *accross* → *across*, légende *Canals* → *Channels*. Le sous-titre du graphique des canaux parlait du vin ; il décrit maintenant ce que le graphique montre.
+- ✅ **Page 4** : le segment de produits était resté sélectionné à l'enregistrement. Les facteurs du chiffre d'affaires étaient donc calculés sur une partie des produits seulement, sans le vin. Segment vidé, chiffres relus sur l'ensemble des produits.
 
 ### Une précision sur la page 4
 
